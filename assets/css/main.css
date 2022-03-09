@@ -5581,7 +5581,8 @@ a.gofintech_blog_meta:hover {
 }
 
 .gofintech_sidebar-latestnews-date {
-  font-size: 15px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .gofintech_blog_sidebar_ad {
