@@ -1,0 +1,202 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+08. About
+******************************************************* 
+*************************************************************** */
+
+.custom-container.container-fluid {
+    @media #{$over} {
+        max-width: 1690px;
+
+    }
+    @media #{$xxxl} {
+        max-width: 1550px;
+
+    }
+    @media #{$xxl} {
+        max-width: 1350px;
+    }
+}
+.gofintech_about_area {
+    background-size: cover;
+}
+.gofintech_about1_content_wrapper {
+    &:is(.pl-70) {
+        @media #{$xs, $sm, $md, $lg} {
+            padding-left: 0;
+        }
+    }
+}
+  .gofintech_about_img_wrapper {
+    position: relative;
+}
+
+.gofintech_about1_video_img {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @media #{$xs} {
+        margin: 15px;
+        right: 0;
+        left: 0;
+    }
+    @media #{$sm} {
+        margin: 35px;
+        right: 0;
+        left: 0;
+    }
+}
+.gofintech_about_img.gofintech_about1_img img {
+    @media #{$xs} {
+        width: 100%;
+    }
+}
+.gofintech_about_video_img.gofintech_about1_video_img img {
+    @media #{$xs} {
+        width: 100%;
+    }
+}
+.gofintech_video_btn {
+    width: 85px;
+    height: 70px;
+    background-color: #f94d1c;
+    display: inline-block;
+    text-align: center;
+    line-height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 0px;
+    & i {
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+    }
+    &:hover {
+        background-color: #1a1a1a;
+        color: #fff;
+    }
+}
+
+
+.gofintech_about1_video_img {
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: rgb(26, 26, 26);
+        opacity: 0.75;
+        z-index: 1;
+    }
+}
+
+
+.gofintech_about_subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    color: #f94d1c;
+    display: inline-block;
+    @media #{$xs} {
+        font-size: 18px;
+    }
+    &:before {
+        position: absolute;
+        left: calc(100% + 20px);
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        background-color: red;
+        width: 40px;
+        height: 3px;
+    }
+}
+
+.gofintech_about_title {
+    font-size: 50px;
+    line-height: 1.2;
+    @media #{$xl} {
+        font-size: 46px;
+    }
+    @media #{$md} {
+        font-size: 40px;
+    }
+    @media #{$xs} {
+        font-size: 33px;
+    }
+    @media #{$sm} {
+        font-size: 38px;
+    }
+}
+.gofintech_features_title_section .gofintech_about_title {
+    position: relative;
+    @media #{$xs, $md, $lg, $xl} {
+        color: #fff;
+    }
+}
+.gofintech_features_title_section {
+    &:is(.mt-80) {
+        @media #{$xs, $md, $lg, $xl} {
+            margin-top: 85px;
+        }
+    }
+}
+.gofintech_list_wrapper {
+    & ul {
+        & li {
+            list-style: none;
+        }
+    }
+}
+.gofintech_about_content_wrapper.gofintech_about1_content_wrapper {
+    &:is(.pl-70) {
+        @media #{$xl} {
+            padding-left: 45px;
+        }
+    }
+    br {
+        @media #{$xl} {
+            display: none;
+        }
+    }
+}
+.gofintech_list1_wrapper {
+    & ul {
+        font-size: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        & li {
+            flex: 0 0 50%;
+            max-width: 50%;
+            margin-bottom: 15px;
+            font-weight: 500;
+            @media #{$xs} {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            & > i {
+                color: #f94d1c;
+                font-size: 18px;
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.gofintech_about1_content_wrapper {
+    & p {
+        font-size: 22px;
+        line-height: 1.8;
+        letter-spacing: 0px;
+    }
+}

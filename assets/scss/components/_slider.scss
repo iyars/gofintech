@@ -1,0 +1,165 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+03. Slider
+******************************************************* 
+*************************************************************** */
+
+.gofintech_slider_section {
+    display: flex;
+    align-items: center;
+    height: 798px;
+    @media #{$xs} {
+        height: 670px;
+    }
+}
+.gofintech_slide_height {
+    position: relative;
+}
+.gofintech_slide_wrapper {
+    position: relative;
+}
+.gofintech_slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-image: url(../img/shape/slide_overlay.png);
+        background-repeat: no-repeat;
+    }
+    &:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: calc((100% - calc(1690px - 24px))/2);
+        height: 100%;
+        background-color: #fff;
+        content: "";
+        @media #{$xxxl} {
+            width: calc((100% - calc(1550px - 24px))/2);  
+        }
+        @media #{$xxl} {
+            width: calc((100% - calc(1350px - 24px))/2);  
+        }
+        @media #{$xl, $lg} {
+            width: calc((100% - calc(100% - 24px))/2);  
+        }
+    }
+}
+.gofintech_shape_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.gofintech_shape1 {
+    position: absolute;
+    left: 60px;
+    top: 110px;
+}
+.gofintech_shape2 {
+    position: absolute;
+    left: 40px;
+    bottom: 110px;
+}
+.gofintech_shape3 {
+    position: absolute;
+    left: 650px;
+    top: 160px;
+}
+.gofintech_shape4 {
+    position: absolute;
+    left: 400px;
+    bottom: 20px;
+}
+.gofintech_slider_title {
+    font-size: 90px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    @media #{$md} {
+        font-size: 76px;
+    }
+    @media #{$xs} {
+        font-size: 46px;
+    }
+    @media #{$sm} {
+        font-size: 56px;
+    }
+}
+.gofintech_slider_content {
+    & p {
+        font-size: 30px;
+        font-weight: 600;
+        color: #1a1a1a;
+        line-height: 1.4;
+        @media #{$xs} {
+            font-size: 25px;
+        }
+    }
+}
+
+.gofintech_slider_area-1 {
+    position: relative;
+}
+.gofintech-swiper-pagination {
+    position: absolute;
+    right: calc((calc((100% - calc(1690px + 115px))/2))/2);
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%) rotate(90deg);
+    @media #{$xxxl} {
+        right: calc((calc((100% - calc(1550px + 115px))/2))/2);;
+    }
+    @media #{$xxl} {
+        right: calc((calc((100% - calc(1350px + 115px))/2))/2);;
+    }
+
+    @media #{$xs, $md, $lg, $xl} {
+        top: auto;
+        bottom: 40px;
+        transform: translateY(0);
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    & .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        margin: 0 5px;
+        background-color: #595959;
+    }
+    & .swiper-pagination-bullet-active {
+        outline: 2px solid #1a1a1a;
+        border: 4px solid #fff;
+        background-color: #1a1a1a;
+    }
+}
+.gofintech_slider_content.text-center.text-xxl-start {
+    @media #{$xl} {
+        padding: 0 90px;
+    }
+    @media #{$lg} {
+        padding: 0 50px;
+    }
+}
+
+    .swiper-container{
+        &.gofintech_testimonial_thumbs_active {
+            width: 23%;
+            margin: 0 auto;
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+    }
+
+
+

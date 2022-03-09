@@ -1,0 +1,75 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+07. Service
+******************************************************* 
+*************************************************************** */
+
+.services_area {
+    &:is(.pt-110) {
+        @media #{$xs} {
+            padding-top: 90px;
+        }
+    }
+}
+
+
+.gofintech_services_single_title {
+    font-size: 26px;
+    margin-bottom: 27px;
+    font-weight: 500;
+    @media #{$xs} {
+        font-size: 23px;
+    }
+    & a {
+        text-decoration: none;
+        &:hover {
+            color: #f94d1c;
+        }
+    }
+}
+
+
+.gofintech_services_single_icon {
+    margin: 40px auto 0;
+    display: block;
+    width: 175px;
+    height: 175px;
+    line-height: 175px;
+    border-radius: 50%;
+    background-color: #f1f3f2;
+    color: #f94d1c;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 75px; 
+
+}
+
+.gofintech_services_single {
+    padding: 50px 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f1f1f1;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+    @media #{$xs} {
+        padding: 50px 25px;
+    }
+    @media #{$sm} {
+        padding: 50px 40px;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 70px 0px rgba(23, 44, 221, 0.08);
+        border-color: transparent;
+        & .gofintech_services_single_icon {
+            color: #fff;
+            background-color: #f94d1c;
+        }
+    }
+}

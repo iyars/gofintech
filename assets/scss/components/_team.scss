@@ -1,0 +1,268 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+12. Team
+******************************************************* 
+*************************************************************** */
+
+
+.gofintech_team_member_details_wrap {
+    &:is(.pl-45) {
+        @media #{$xs, $md, $lg} {
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+    }
+}
+.gofintech_team_member_name {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    & a {
+        text-decoration: none;
+        &:hover {
+            color: #f94d1c;
+        }
+    }
+}
+
+.gofintech_team_member_designation {
+    font-size: 16px;
+    color: #878c8f;
+}
+
+.gofintech_team_member_social_action a {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+    color: #1a1a1a;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.gofintech_team_member_social_action a:hover {
+    background-color: #f94d1c;
+    color: #fff;
+}
+
+.gofintech_team_member_single {position: relative;overflow: hidden;}
+
+.gofintech_team_member_single_info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 20px;
+    bottom: -100px;
+    background-color: #fff;
+    padding: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+
+.gofintech_team_member_social_action {
+    position: absolute;
+    right: -70px;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    margin: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+
+.gofintech_team_member_single img {
+    min-height: 350px;
+    object-fit: cover;
+}
+
+.gofintech_team_member_single:hover .gofintech_team_member_social_action {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+}
+
+.gofintech_team_member_single:hover .gofintech_team_member_single_info {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0;
+}
+
+.gofintech_team_member_single_info.gofintech_team_details_single_info {
+    visibility: visible;
+    opacity: 1;
+    bottom: 0;
+}
+
+.gofintech_team_member_social_action.gofintech_team_details_social_action {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.gofintech_team_member_name.gofintech_team_details_name {
+    font-size: 40px;
+    color: #f94d1c;
+    @media #{$xs} {
+        font-size: 25px;
+    }
+    @media #{$xs} {
+        font-size: 28px;
+    }
+}
+.gofintech_team_details_designation {
+    font-size: 50px;
+    @media #{$md}{
+        font-size: 45px;
+    }
+    @media #{$xs}{
+        font-size: 35px;
+    }
+    @media #{$sm}{
+        font-size: 40px;
+    }
+}
+
+.gofintech_details_p {
+    font-size: 18px;
+}
+
+.team_person_info strong {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-right: 5px;
+}
+
+.team_person_info a, .team_person_info span {
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.team_person_info a:hover {
+    color: #F94D1C;
+}
+
+.gofintech_help_title {
+    font-size: 50px;
+    @media #{$md}{
+        font-size: 45px;
+    }
+    @media #{$xs}{
+        font-size: 35px;
+    }
+    @media #{$sm}{
+        font-size: 40px;
+    }
+}
+
+.gofintech_help_feature_title {
+    font-size: 22px;
+}
+
+.gofintech_help_feature_single {
+    display: flex;
+    @media #{$xs} {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media #{$sm} {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.gofintech_help_feature_single_icon {
+    height: 80px;
+    margin-right: 25px;
+    background-color: #F94D1C;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    border-radius: 50%;
+    flex: 0 0 80px;
+    outline: 10px solid #fff;
+    max-width: 80px;
+    @media #{$xs} {
+        margin-bottom: 30px;
+        margin-right: 0;
+        width: 80px;
+    }
+    @media #{$sm} {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+}
+
+.gofintech_help_feature_single_icon i {
+    font-size: 30px;
+}
+
+.gofintech_help_bg {
+    background-color: #f1f3f2;
+}
+.gofintech_help_area {
+    position: relative;
+}
+
+.gofintech_bg_img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    @media #{$xs, $md, $lg} {
+        display: none;
+    }
+}
+.gofintech_bg_img img {
+    height: 100%;
+    object-fit: cover;
+}
+.gofintech_team_member_designation-1 {
+    font-size: 22px;
+    @media #{$xs} {
+        font-size: 16px;
+    }
+    @media #{$sm} {
+        font-size: 18px;
+    }
+}
+
+.gofintech_help_wrap {
+    @media #{$xs} {
+        text-align: center;
+    }
+    @media #{$sm} {
+        text-align: start;
+    }
+    &:is(.pr-60) {
+        @media #{$lg, $md, $xs} {
+            padding-right: 0;
+        }
+    }
+}
+.gofintech_help_area.gofintech_help_bg.pt-110.pb-75 {
+    @media #{$lg} {
+        padding-bottom: 92px;
+    }
+    @media #{$md} {
+        padding-bottom: 68px;
+    }
+    @media #{$xs} {
+        padding-bottom: 68px;
+    }
+}

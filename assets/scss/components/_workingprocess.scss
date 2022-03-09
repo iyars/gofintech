@@ -1,0 +1,105 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+10. Working Process
+******************************************************* 
+*************************************************************** */
+
+.gofintech_working_process_step_icon {
+    width: 150px;
+    height: 150px;
+    border: 1px dashed #333;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 180px;
+    margin-bottom: 30px;
+    & i {
+        font-size: 55px;
+        color: #F94D1C;
+        width: 115px;
+        height: 115px;
+        background-color: #111;
+        text-align: center;
+        line-height: 115px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(242, 244, 251);
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.05);
+        transition: 0.3s;
+    } 
+    & a {
+        &:hover {
+            & i {
+                background-color: #F94D1C;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.gofintech_working_process_step {
+    padding: 0 40px;
+    @media #{$xs} {
+        padding: 0 25px;
+    }
+}
+.gofintech_working_process_step1 {
+    position: relative;
+}
+
+.gofintech_working_process_step_title {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    @media #{$xs} {
+        font-size: 23px;
+    }
+    & a {
+        text-decoration: none;
+    }
+    &:hover {
+        & a {
+            color: #F94D1C;
+        }
+    }
+}
+
+.gofintech_working_process_step_text {
+    & p {
+        letter-spacing: 1px;
+    }
+}
+
+
+
+.gofintech_working_process_step1 .gofintech_working_process_step_icon, .gofintech_working_process_step2 .gofintech_working_process_step_icon {
+    position: relative;
+}
+
+.gofintech_working_process_step1 .gofintech_working_process_step_icon:before, .gofintech_working_process_step2 .gofintech_working_process_step_icon:before {
+    position: absolute;
+    left: calc(100% + 25px);
+    top: 50%;
+    width: 255px;
+    content: "";
+    background-image: url(../img/shape/arrow_dot1.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    @media #{$xs, $md, $lg, $xl} {
+        display: none;
+    }
+}
+.gofintech_working_process_step2 .gofintech_working_process_step_icon:before {
+    background-image: url(../img/shape/arrow_dot2.png);
+    background-repeat: no-repeat;
+    left: calc(100% + 15px);
+    width: 265px;
+}
+
+
+
